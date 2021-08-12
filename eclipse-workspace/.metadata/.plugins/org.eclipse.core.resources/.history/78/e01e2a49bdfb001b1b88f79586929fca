@@ -1,0 +1,11 @@
+package a;
+
+public class main {
+
+	public static void main(String[] args) {
+		Tateti ttt = new Tateti();
+		ttt.get_hola();
+
+	}
+
+}

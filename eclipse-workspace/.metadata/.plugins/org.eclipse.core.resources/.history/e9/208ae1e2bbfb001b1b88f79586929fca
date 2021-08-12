@@ -1,0 +1,3 @@
+module Tateti {
+	system.out.println("Hola");
+}

@@ -1,0 +1,5 @@
+package a;
+
+public class Tateti {
+	system.out.println("HOLA");
+}

@@ -1,0 +1,9 @@
+package a;
+
+public class Tateti {
+	void get_hola(){
+		System.out.println("Hola");
+	}
+
+
+}

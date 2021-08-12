@@ -1,0 +1,16 @@
+package a;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		char tablero[][] = {{'-','-','-'},
+							{'-','x','-'},
+							{'o','-','-'}};
+		
+		Tateti ttt = new Tateti();
+		ttt.print_board(tablero);
+
+	}
+
+}
