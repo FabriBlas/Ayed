@@ -18,18 +18,14 @@ public class main {
 	
 		
 		Tateti ganador= new Tateti ();
-		System.out.println(ganador.is_winner(tablero));
-		ganador.is_winner(tablero);
+		System.out.println(ganador.is_winner(tablero,'x'));
+		ganador.is_winner(tablero,'x');
 		
 	
 		
 		
 		
 	
-		
-		
-		
-	 
 		
 		
 

@@ -5,6 +5,7 @@ public class Tateti {
 	
    // char vacio= '-';
 	char arreglo[][];
+
 	
 	public Tateti(char[][] arreglo) {
 		
@@ -25,31 +26,23 @@ public class Tateti {
 	
 	
 	// Conocer si un jugador gano
-	boolean is_winner(char arreglo[][]) {
-		
-		      if  (arreglo[0][0]=='x' && arreglo[0][1]=='x' && arreglo[0][2]=='x' 
-				|| arreglo[1][0]=='x' && arreglo[1][1]=='x' && arreglo[1][2]=='x'
-				|| arreglo[2][0]=='x' && arreglo[2][1]=='x' && arreglo[2][2]=='x'
-				|| arreglo[0][0]=='x' && arreglo[1][0]=='x' && arreglo[2][0]=='x'
-				|| arreglo[0][1]=='x' && arreglo[1][1]=='x' && arreglo[2][1]=='x'
-				|| arreglo[0][2]=='x' && arreglo[1][2]=='x' && arreglo[2][2]=='x'
-				|| arreglo[0][0]=='x' && arreglo[1][1]=='x' && arreglo[2][2]=='x'
-				|| arreglo[0][2]=='x' && arreglo[1][1]=='x' && arreglo[2][0]=='x') {
-			return true;
+	boolean is_winner(char arreglo[][],char entrada) {
+		boolean check;
+		      if  (arreglo[0][0]==entrada && arreglo[0][1]==entrada && arreglo[0][2]==entrada
+				|| arreglo[1][0]==entrada && arreglo[1][1]==entrada && arreglo[1][2]==entrada
+				|| arreglo[2][0]==entrada && arreglo[2][1]==entrada && arreglo[2][2]==entrada
+				|| arreglo[0][0]==entrada && arreglo[1][0]==entrada && arreglo[2][0]==entrada
+				|| arreglo[0][1]==entrada && arreglo[1][1]==entrada && arreglo[2][1]==entrada
+				|| arreglo[0][2]==entrada && arreglo[1][2]==entrada && arreglo[2][2]==entrada
+				|| arreglo[0][0]==entrada && arreglo[1][1]==entrada && arreglo[2][2]==entrada
+				|| arreglo[0][2]==entrada && arreglo[1][1]==entrada && arreglo[2][0]==entrada){
+			  
+		    check=true;
+			 }else {
 			
-		}else if  (arreglo[0][0]=='o' && arreglo[0][1]=='o' && arreglo[0][2]=='o' 
-				|| arreglo[1][0]=='o' && arreglo[1][1]=='o' && arreglo[1][2]=='o'
-				|| arreglo[2][0]=='o' && arreglo[2][1]=='o' && arreglo[2][2]=='o'
-				|| arreglo[0][0]=='o' && arreglo[1][0]=='o' && arreglo[2][0]=='o'
-				|| arreglo[0][1]=='o' && arreglo[1][1]=='o' && arreglo[2][1]=='o'
-				|| arreglo[0][2]=='o' && arreglo[1][2]=='o' && arreglo[2][2]=='o'
-				|| arreglo[0][0]=='o' && arreglo[1][1]=='o' && arreglo[2][2]=='o'
-				|| arreglo[0][2]=='o' && arreglo[1][1]=='o' && arreglo[2][0]=='o') {
-			return true;
-			 }
-		      else {
-			return false;
-		}
+		    check= false;
+		     }
+		      return check;
 	
 	}
 	
@@ -62,9 +55,10 @@ public class Tateti {
 	void player_turn (char player, int pos, char arreglo[][]) {
 
 	
+		
+	
+	
 	}
-	
-	
 	
 	// sabes si hay un espacio libre
 	boolean has_cell_free(char player, int pos) {
