@@ -52,13 +52,34 @@ public class Tateti {
 	
 	
 	// Insertar ficha en el tablero
-	void player_turn (char player, int pos, char arreglo[][]) {
-
-	
-		
-	
-	
+	void player_turn (char player, int pos,char arreglo[][]) {
+		      
+			   switch (pos) {
+			   case 1:
+				    arreglo [0][0]= player;
+				    
+				   break;
+			   case 2: arreglo [0][1]= player;
+				   break;
+			   case 3: arreglo [0][2]= player;
+				   break;
+			   case 4: arreglo [1][0]= player;
+				   break;
+			   case 5: arreglo [1][1]= player;
+				   break;
+			   case 6: arreglo [1][2]= player;
+				   break;
+			   case 7: arreglo [2][0]= player;
+				   break;
+			   case 8: arreglo [2][1]= player;
+				   break;
+			   case 9: arreglo [2][2]= player;
+				   break;
+				  
+			   }	
 	}
+	 
+	
 	
 	// sabes si hay un espacio libre
 	boolean has_cell_free(char player, int pos) {
