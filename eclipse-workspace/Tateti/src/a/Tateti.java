@@ -3,8 +3,10 @@ package a;
 //import java.util.Iterator;
 public class Tateti {
 	
-   // char vacio= '-';
-	char arreglo[][];
+    char vacio= '-';
+	char arreglo[][]= new char [3][3];
+	int posicion;
+	
 
 	
 	public Tateti(char[][] arreglo) {
@@ -38,6 +40,7 @@ public class Tateti {
 				|| arreglo[0][2]==entrada && arreglo[1][1]==entrada && arreglo[2][0]==entrada){
 			  
 		    check=true;
+		    
 			 }else {
 			
 		    check= false;
@@ -46,46 +49,73 @@ public class Tateti {
 	
 	}
 	
-	
-	
-	
-	
-	
 	// Insertar ficha en el tablero
 	void player_turn (char player, int pos,char arreglo[][]) {
 		      
 			   switch (pos) {
 			   case 1:
+				   if(arreglo[0][0]==vacio) {
 				    arreglo [0][0]= player;
-				    
+				   } else { System.out.println("lugar ocupado");
+				      }
 				   break;
-			   case 2: arreglo [0][1]= player;
+			   case 2:
+				   if(arreglo [0][1]==vacio) {
+					   arreglo [0][1]= player;
+				   }else { System.out.println("lugar ocupado");
+				      }
 				   break;
-			   case 3: arreglo [0][2]= player;
+			   case 3: if(arreglo [0][2]==vacio) {
+				   arreglo [0][2]= player;
+			   } else { System.out.println("lugar ocupado");
+			      }
 				   break;
-			   case 4: arreglo [1][0]= player;
+			   case 4:if( arreglo [1][0]==vacio) {
+				   arreglo [1][0]= player;
+				   }else { System.out.println("lugar ocupado");
+				      }
 				   break;
-			   case 5: arreglo [1][1]= player;
+			   case 5: if( arreglo [1][1]==vacio) {
+				   arreglo [1][1]= player;
+			   }else { System.out.println("lugar ocupado");
+			      }
 				   break;
-			   case 6: arreglo [1][2]= player;
+			   case 6: if(arreglo [1][2]==vacio) {
+				   arreglo [1][2]= player;
+			   }else { System.out.println("lugar ocupado");
+			      }
 				   break;
-			   case 7: arreglo [2][0]= player;
+			   case 7: if(arreglo [2][0]==vacio) {
+				   arreglo [2][0]= player;
+			   }else { System.out.println("lugar ocupado");
+			      }
 				   break;
-			   case 8: arreglo [2][1]= player;
+			   case 8: if(arreglo [2][1]==vacio) {
+				   arreglo [2][1]= player;
+			   }else { System.out.println("lugar ocupado");
+			      }
 				   break;
-			   case 9: arreglo [2][2]= player;
+			   case 9: if (arreglo [2][2]==vacio) {
+				   arreglo [2][2]= player;
+			   }else { System.out.println("lugar ocupado");
+			      }
 				   break;
+			   default: System.out.println("error, el numero ingresado no equivale a un lugar");
 				  
 			   }	
-	}
-	 
-	
-	
+	    }
 	// sabes si hay un espacio libre
-	boolean has_cell_free(char player, int pos) {
+	public boolean has_cell_free(char arreglo [][]) {
 		
-	   
-	    return true;
+		for (int i = 0; i < arreglo.length; i++) {
+			for (int j = 0; j < arreglo.length; j++) {
+				if (arreglo[i][j]==vacio) {
+					return true;
+			}
+		  }	
+		}
+		
+		return false;
 	
 	
 	}
