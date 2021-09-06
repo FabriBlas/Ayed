@@ -1,8 +1,9 @@
 package a;
 
-//import java.util.Iterator;
+import java.util.Scanner;
+
 public class Tateti {
-	
+	Scanner teclado= new Scanner (System.in);
     char vacio= '-';
 	char arreglo[][]= new char [3][3];
 	int posicion;
@@ -119,4 +120,17 @@ public class Tateti {
 	
 	
 	}
+	
+	public  boolean space (char arreglo[][], int pos) {
+		int fila;
+		int columna;
+		boolean res=false;
+		fila=(pos-1)/3;
+		columna= (pos-1)%3;
+		if (arreglo [fila][columna]==vacio) {
+			res= true;
+		} 
+		return res;
+	}
+	
 }
